@@ -875,6 +875,10 @@ ul {
   stroke: var(--color-primary);
 }
 
+.organizer-info {
+  min-width: 0;
+}
+
 .organizer-info h4 {
   font-size: 1rem;
   font-weight: 600;
@@ -884,12 +888,25 @@ ul {
 .organizer-info p {
   font-size: 0.8rem;
   color: var(--color-text-muted);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .organizer-info a {
   font-size: 0.8rem;
   display: block;
   margin-top: 4px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.organizer-info .email-obfuscated {
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 4px;
+  color: var(--color-primary);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* ---- Footer ---- */
