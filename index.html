@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compositional and Modular Learning in the Era of Scaling in Robotics — IROS 2026 Workshop</title>
+  <meta name="description" content="IROS 2026 Workshop: Compositional and Modular Learning in the Era of Scaling in Robotics" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a class="nav-brand" href="#home">IROS 2026 Workshop</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#cfp">Call for Papers</a></li>
+        <li><a href="#dates">Dates</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#organizers">Organizers</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="conference-badge">IROS 2026 Workshop</div>
+      <h1 class="hero-title">Compositional and Modular Learning in the Era of Scaling in Robotics</h1>
+      <p class="hero-subtitle">
+        <a href="https://2026.ieee-iros.org/" target="_blank" rel="noopener">
+          IEEE/RSJ International Conference on Intelligent Robots and Systems
+        </a>
+      </p>
+      <div class="hero-meta">
+        <span class="hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          2026 (Date TBA)
+        </span>
+        <span class="hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Abu Dhabi, UAE
+        </span>
+      </div>
+      <div class="hero-actions">
+        <a href="#cfp" class="btn btn-primary">Call for Papers</a>
+        <a href="#overview" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll to explore</span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Overview -->
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About</span>
+          <h2 class="section-title">Workshop Overview</h2>
+        </div>
+        <div class="overview-grid">
+          <div class="overview-text">
+            <p>
+              Compositional or modular learning enables systems to exploit the structure of the problem
+              by building abstractions between functionally different components. These structural
+              assumptions of the underlying problem help in reducing the sample complexity of the
+              learning system.
+            </p>
+            <p>
+              This has led to increased adoption of compositional approaches within the robotics
+              community, primarily due to the diversity and the lack of standardization in robot
+              embodiments, observational modalities and task goals that make collection of data
+              supporting all combinations difficult.
+            </p>
+            <p>
+              As various efforts attempt to scale data and build large foundation models, it could be
+              argued that these foundation models approximate compositional behavior for the scaled
+              modality, embodiment and goal combinations. However, certain modalities such as force and
+              tactile are intrinsically difficult to scale and standardize across different setups.
+              Moreover, human actions are highly compositional, dextrous and goal oriented, making the
+              scaling of the training data along the skill axis a costly endeavour.
+            </p>
+            <p>
+              We propose this workshop to solicit novel works that use the principle of compositionality
+              or modularity for tackling learning problems in robotics. Specifically, we encourage works
+              that leverage the representational power of scaled systems in their approach to showcase
+              the best of both worlds.
+            </p>
+          </div>
+          <div class="overview-focus">
+            <h3>Focus Areas</h3>
+            <div class="focus-card">
+              <div class="focus-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="14.83" y1="9.17" x2="18.36" y2="5.64"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg>
+              </div>
+              <div>
+                <h4>Modality Composition</h4>
+                <p>Can we develop novel modular systems that compose scaled modality representations with modules learned for the data-scarce modalities?</p>
+              </div>
+            </div>
+            <div class="focus-card">
+              <div class="focus-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="6" height="10" rx="1"/><rect x="9" y="3" width="6" height="18" rx="1"/><rect x="16" y="7" width="6" height="10" rx="1"/></svg>
+              </div>
+              <div>
+                <h4>Interfacing Modules</h4>
+                <p>How can we develop better abstractions for effective modularization in robotics, such as for long-horizon manipulation or embodiment transfer of policies?</p>
+              </div>
+            </div>
+            <div class="focus-card">
+              <div class="focus-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2z"/><path d="M12 14c-7 0-10 3-10 4v1h20v-1c0-1-3-4-10-4z"/></svg>
+              </div>
+              <div>
+                <h4>Role of Agents in Robotics</h4>
+                <p>How can we leverage modular agents to perform manipulation in the real world?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call for Papers -->
+    <section class="section section-alt" id="cfp">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Submissions</span>
+          <h2 class="section-title">Call for Papers</h2>
+          <p class="section-desc">
+            We invite submissions of original research papers on compositional and modular learning
+            for robotics. Work-in-progress and position papers are also welcome.
+          </p>
+        </div>
+
+        <div class="cfp-grid">
+          <div class="cfp-topics">
+            <h3>Topics of Interest</h3>
+            <p>We solicit contributions on topics including but not limited to:</p>
+            <ul class="topic-list">
+              <li>Modular robot learning and skill composition</li>
+              <li>Compositional representations for robot perception</li>
+              <li>Foundation models and compositionality in robotics</li>
+              <li>Multi-modal learning: vision, language, force, and tactile sensing</li>
+              <li>Long-horizon task planning with composable skills</li>
+              <li>Hierarchical reinforcement learning and option frameworks</li>
+              <li>Transfer learning and cross-embodiment policies</li>
+              <li>Modular architectures for dextrous manipulation</li>
+              <li>Data-efficient learning with structural priors</li>
+              <li>Compositional world models and environment representations</li>
+              <li>Human-robot interaction and imitation of compositional actions</li>
+              <li>Graph neural networks for robotic manipulation</li>
+              <li>Object-centric and part-based scene representations</li>
+              <li>Neuro-symbolic approaches to robot learning</li>
+              <li>Sample complexity and generalization in modular systems</li>
+            </ul>
+          </div>
+
+          <div class="cfp-details">
+            <div class="cfp-card">
+              <h3>Submission Guidelines</h3>
+              <ul class="guideline-list">
+                <li>
+                  <strong>Format:</strong> IEEE IROS format (two-column), up to <strong>6 pages</strong>
+                  (plus unlimited references)
+                </li>
+                <li>
+                  <strong>Archival:</strong> Workshop papers are <strong>non-archival</strong>; concurrent
+                  submissions are allowed
+                </li>
+                <li>
+                  <strong>Review:</strong> Double-blind peer review
+                </li>
+                <li>
+                  <strong>Presentation:</strong> Accepted papers will be presented as posters or spotlight talks
+                </li>
+                <li>
+                  <strong>Template:</strong> Use the official
+                  <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener">
+                    IEEE Conference Template
+                  </a>
+                </li>
+              </ul>
+              <a href="#dates" class="btn btn-primary btn-sm">View Important Dates</a>
+            </div>
+
+            <div class="cfp-card cfp-highlight">
+              <h3>Submission Portal</h3>
+              <p>Submissions will be handled via OpenReview. The portal will open closer to the submission deadline.</p>
+              <a href="#" class="btn btn-outline btn-sm btn-disabled">Coming Soon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Dates -->
+    <section class="section" id="dates">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Timeline</span>
+          <h2 class="section-title">Important Dates</h2>
+          <p class="section-desc">All deadlines are 23:59 Anywhere on Earth (AoE, UTC−12).</p>
+        </div>
+        <div class="dates-timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot upcoming"></div>
+            <div class="timeline-content">
+              <span class="timeline-label">Paper Submission Deadline</span>
+              <span class="timeline-date">TBA</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot upcoming"></div>
+            <div class="timeline-content">
+              <span class="timeline-label">Notification of Acceptance</span>
+              <span class="timeline-date">TBA</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot upcoming"></div>
+            <div class="timeline-content">
+              <span class="timeline-label">Camera-Ready Deadline</span>
+              <span class="timeline-date">TBA</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot upcoming"></div>
+            <div class="timeline-content">
+              <span class="timeline-label">Workshop Date</span>
+              <span class="timeline-date">IROS 2026 (TBA)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Invited Speakers -->
+    <section class="section section-alt" id="speakers">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Invited Talks</span>
+          <h2 class="section-title">Invited Speakers</h2>
+          <p class="section-desc">We are pleased to welcome distinguished researchers from across academia and industry.</p>
+        </div>
+        <div class="speakers-grid">
+          <div class="speaker-tba">
+            <div class="tba-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <p>Invited speakers will be announced soon. Check back for updates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule -->
+    <section class="section" id="schedule">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Program</span>
+          <h2 class="section-title">Workshop Schedule</h2>
+          <p class="section-desc">The detailed program will be posted once the workshop date is confirmed.</p>
+        </div>
+        <div class="schedule-placeholder">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <p>Schedule to be announced.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organizers -->
+    <section class="section section-alt" id="organizers">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Team</span>
+          <h2 class="section-title">Organizers</h2>
+        </div>
+        <div class="organizers-grid">
+          <div class="organizer-card tba-card">
+            <div class="organizer-avatar placeholder-avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="organizer-info">
+              <h4>Organizers TBA</h4>
+              <p>Organizer information will be posted soon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>IROS 2026 Workshop</h3>
+          <p>Compositional and Modular Learning in the Era of Scaling in Robotics</p>
+          <p class="footer-conference">
+            <a href="https://2026.ieee-iros.org/" target="_blank" rel="noopener">
+              IEEE/RSJ IROS 2026 — Abu Dhabi, UAE
+            </a>
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#cfp">Call for Papers</a></li>
+            <li><a href="#dates">Important Dates</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Related Links</h4>
+          <ul>
+            <li><a href="https://2026.ieee-iros.org/" target="_blank" rel="noopener">IROS 2026</a></li>
+            <li><a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener">IEEE Templates</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Compositional Robotics Workshop Organizers. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
