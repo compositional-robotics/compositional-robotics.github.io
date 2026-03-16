@@ -9,6 +9,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet" />
+  <noscript>
+    <style>
+      .section-header, .focus-card, .cfp-card, .timeline-item, .speaker-card, .organizer-card {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+    </style>
+  </noscript>
 </head>
 <body>
 
@@ -48,7 +56,7 @@
         </span>
         <span class="hero-meta-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          Abu Dhabi, UAE
+          Pittsburgh, PA, USA
         </span>
       </div>
       <div class="hero-actions">
@@ -151,21 +159,17 @@
             <h3>Topics of Interest</h3>
             <p>We solicit contributions on topics including but not limited to:</p>
             <ul class="topic-list">
-              <li>Modular robot learning and skill composition</li>
-              <li>Compositional representations for robot perception</li>
+              <li>Compositional and modular learning for robotics</li>
               <li>Foundation models and compositionality in robotics</li>
-              <li>Multi-modal learning: vision, language, force, and tactile sensing</li>
-              <li>Long-horizon task planning with composable skills</li>
-              <li>Hierarchical reinforcement learning and option frameworks</li>
-              <li>Transfer learning and cross-embodiment policies</li>
+              <li>Multi-modal learning with force and tactile sensing</li>
+              <li>Modular systems composing scaled and data-scarce modality representations</li>
+              <li>Abstractions for effective modularization in robotics</li>
+              <li>Long-horizon manipulation with composable skills</li>
+              <li>Embodiment transfer of policies</li>
               <li>Modular architectures for dextrous manipulation</li>
-              <li>Data-efficient learning with structural priors</li>
-              <li>Compositional world models and environment representations</li>
-              <li>Human-robot interaction and imitation of compositional actions</li>
-              <li>Graph neural networks for robotic manipulation</li>
-              <li>Object-centric and part-based scene representations</li>
-              <li>Neuro-symbolic approaches to robot learning</li>
-              <li>Sample complexity and generalization in modular systems</li>
+              <li>Imitation of compositional human actions</li>
+              <li>Data-efficient learning and sample complexity in modular systems</li>
+              <li>Modular agents for real-world manipulation</li>
             </ul>
           </div>
 
@@ -189,8 +193,8 @@
                 </li>
                 <li>
                   <strong>Template:</strong> Use the official
-                  <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener">
-                    IEEE Conference Template
+                  <a href="https://ras.papercept.net/conferences/support/tex.php" target="_blank" rel="noopener">
+                    RAS PaperCept Template
                   </a>
                 </li>
               </ul>
@@ -254,14 +258,57 @@
         <div class="section-header">
           <span class="section-tag">Invited Talks</span>
           <h2 class="section-title">Invited Speakers</h2>
-          <p class="section-desc">We are pleased to welcome distinguished researchers from across academia and industry.</p>
+          <p class="section-desc">The following speakers have accepted (conditioned on attendance at IROS 2026).</p>
         </div>
         <div class="speakers-grid">
-          <div class="speaker-tba">
-            <div class="tba-icon">
+          <div class="speaker-card">
+            <div class="speaker-avatar-placeholder">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
             </div>
-            <p>Invited speakers will be announced soon. Check back for updates.</p>
+            <div class="speaker-name">Yilun Du</div>
+            <div class="speaker-affiliation">Harvard University</div>
+          </div>
+          <div class="speaker-card">
+            <div class="speaker-avatar-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="speaker-name">Jiayuan Mao</div>
+            <div class="speaker-affiliation">University of Pennsylvania / Amazon</div>
+          </div>
+          <div class="speaker-card">
+            <div class="speaker-avatar-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="speaker-name">Eric Rosen</div>
+            <div class="speaker-affiliation">RAI Institute</div>
+          </div>
+          <div class="speaker-card">
+            <div class="speaker-avatar-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="speaker-name">Nakul Gopalan</div>
+            <div class="speaker-affiliation">Arizona State University</div>
+          </div>
+          <div class="speaker-card">
+            <div class="speaker-avatar-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="speaker-name">Benjamin Rosman</div>
+            <div class="speaker-affiliation">University of the Witwatersrand</div>
+          </div>
+          <div class="speaker-card">
+            <div class="speaker-avatar-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="speaker-name">Leslie Kaelbling</div>
+            <div class="speaker-affiliation">MIT</div>
+          </div>
+          <div class="speaker-card">
+            <div class="speaker-avatar-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="speaker-name">Eric Eaton</div>
+            <div class="speaker-affiliation">University of Pennsylvania</div>
           </div>
         </div>
       </div>
@@ -290,13 +337,80 @@
           <h2 class="section-title">Organizers</h2>
         </div>
         <div class="organizers-grid">
-          <div class="organizer-card tba-card">
-            <div class="organizer-avatar placeholder-avatar">
+          <div class="organizer-card">
+            <div class="placeholder-avatar">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
             </div>
             <div class="organizer-info">
-              <h4>Organizers TBA</h4>
-              <p>Organizer information will be posted soon.</p>
+              <h4>Omkar Patil</h4>
+              <p>3rd year PhD, Arizona State University</p>
+              <a href="mailto:opatil3@asu.edu">opatil3@asu.edu</a>
+              <a href="https://omkarpatil18.github.io/" target="_blank" rel="noopener">omkarpatil18.github.io</a>
+            </div>
+          </div>
+          <div class="organizer-card">
+            <div class="placeholder-avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="organizer-info">
+              <h4>Haonan Chen</h4>
+              <p>Postdoctoral Researcher, Harvard University &amp; Stanford University</p>
+              <a href="mailto:haonan_chen@seas.harvard.edu">haonan_chen@seas.harvard.edu</a>
+              <a href="https://haonan16.github.io/" target="_blank" rel="noopener">haonan16.github.io</a>
+            </div>
+          </div>
+          <div class="organizer-card">
+            <div class="placeholder-avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="organizer-info">
+              <h4>Utkarsh Mishra</h4>
+              <p>4th year PhD, Georgia Tech</p>
+              <a href="mailto:umishra31@gatech.edu">umishra31@gatech.edu</a>
+              <a href="https://umishra.me/" target="_blank" rel="noopener">umishra.me</a>
+            </div>
+          </div>
+          <div class="organizer-card">
+            <div class="placeholder-avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="organizer-info">
+              <h4>Julen Urain</h4>
+              <p>Applied Scientist, Amazon FAR</p>
+              <a href="mailto:julen@robot-learning.de">julen@robot-learning.de</a>
+              <a href="https://robotgradient.com/" target="_blank" rel="noopener">robotgradient.com</a>
+            </div>
+          </div>
+          <div class="organizer-card">
+            <div class="placeholder-avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="organizer-info">
+              <h4>Nakul Gopalan</h4>
+              <p>Assistant Professor, Arizona State University</p>
+              <a href="mailto:ngopala6@asu.edu">ngopala6@asu.edu</a>
+              <a href="https://nakulgopalan.github.io/" target="_blank" rel="noopener">nakulgopalan.github.io</a>
+            </div>
+          </div>
+          <div class="organizer-card">
+            <div class="placeholder-avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="organizer-info">
+              <h4>Danfei Xu</h4>
+              <p>Assistant Professor, Georgia Tech</p>
+              <a href="https://faculty.cc.gatech.edu/~danfei/" target="_blank" rel="noopener">faculty.cc.gatech.edu/~danfei</a>
+            </div>
+          </div>
+          <div class="organizer-card">
+            <div class="placeholder-avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="organizer-info">
+              <h4>Yilun Du</h4>
+              <p>Assistant Professor, Harvard University</p>
+              <a href="mailto:ydu@seas.harvard.edu">ydu@seas.harvard.edu</a>
+              <a href="https://yilundu.github.io/" target="_blank" rel="noopener">yilundu.github.io</a>
             </div>
           </div>
         </div>
@@ -314,7 +428,7 @@
           <p>Compositional and Modular Learning in the Era of Scaling in Robotics</p>
           <p class="footer-conference">
             <a href="https://2026.ieee-iros.org/" target="_blank" rel="noopener">
-              IEEE/RSJ IROS 2026 — Abu Dhabi, UAE
+              IEEE/RSJ IROS 2026 — Pittsburgh, PA, USA
             </a>
           </p>
         </div>
@@ -333,7 +447,7 @@
           <h4>Related Links</h4>
           <ul>
             <li><a href="https://2026.ieee-iros.org/" target="_blank" rel="noopener">IROS 2026</a></li>
-            <li><a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener">IEEE Templates</a></li>
+            <li><a href="https://ras.papercept.net/conferences/support/tex.php" target="_blank" rel="noopener">Submission Template</a></li>
           </ul>
         </div>
       </div>

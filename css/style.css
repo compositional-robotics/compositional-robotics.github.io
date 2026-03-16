@@ -702,6 +702,24 @@ ul {
   font-weight: 500;
 }
 
+.speaker-avatar-placeholder {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  border: 3px solid var(--color-primary-light);
+}
+
+.speaker-avatar-placeholder svg {
+  width: 40px;
+  height: 40px;
+  stroke: var(--color-primary);
+}
+
 /* ---- Speakers ---- */
 .speakers-grid {
   display: grid;
