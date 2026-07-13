@@ -702,22 +702,15 @@ ul {
   font-weight: 500;
 }
 
-.speaker-avatar-placeholder {
+.speaker-photo {
+  display: block;
   width: 96px;
   height: 96px;
   border-radius: 50%;
+  object-fit: cover;
   background: var(--color-primary-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0 auto 16px;
   border: 3px solid var(--color-primary-light);
-}
-
-.speaker-avatar-placeholder svg {
-  width: 40px;
-  height: 40px;
-  stroke: var(--color-primary);
 }
 
 /* ---- Speakers ---- */
@@ -794,26 +787,64 @@ ul {
 }
 
 /* ---- Schedule ---- */
-.schedule-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 72px 24px;
-  border: 2px dashed var(--color-border);
-  border-radius: var(--radius-xl);
+.schedule-table {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: var(--color-surface);
+}
+
+.schedule-head,
+.schedule-row {
+  display: grid;
+  grid-template-columns: 170px minmax(200px, 1fr) minmax(220px, 1.4fr);
+  gap: 20px;
+  align-items: baseline;
+  padding: 16px 24px;
+}
+
+.schedule-head {
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--color-text-muted);
 }
 
-.schedule-placeholder svg {
-  width: 48px;
-  height: 48px;
-  opacity: 0.5;
+.schedule-row + .schedule-row,
+.schedule-head + .schedule-row {
+  border-top: 1px solid var(--color-border);
 }
 
-.schedule-placeholder p {
-  font-size: 1rem;
+.schedule-row.is-break {
+  background: var(--color-bg-alt);
+}
+
+.schedule-time {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.schedule-session {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.schedule-row.is-talk .schedule-session {
+  color: var(--color-primary);
+}
+
+.schedule-detail {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
 }
 
 /* ---- Organizers ---- */
@@ -858,21 +889,15 @@ ul {
   border: 2px solid var(--color-primary-light);
 }
 
-.placeholder-avatar {
-  background: var(--color-primary-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.organizer-photo {
   width: 64px;
   height: 64px;
   border-radius: 50%;
   flex-shrink: 0;
-}
-
-.placeholder-avatar svg {
-  width: 28px;
-  height: 28px;
-  stroke: var(--color-primary);
+  object-fit: cover;
+  background: var(--color-primary-light);
+  border: 2px solid var(--color-surface);
+  box-shadow: 0 0 0 1px var(--color-border);
 }
 
 .organizer-info {
@@ -1053,6 +1078,16 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
+  }
+
+  .schedule-head {
+    display: none;
+  }
+
+  .schedule-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 16px 20px;
   }
 
   .footer-grid {
