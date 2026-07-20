@@ -692,18 +692,6 @@ ul {
   background: var(--color-primary);
 }
 
-.timeline-dot.past {
-  border-color: var(--color-secondary);
-  background: #f0fdf9;
-}
-
-.timeline-dot.past::after {
-  content: '✓';
-  color: var(--color-secondary);
-  font-size: 14px;
-  font-weight: 700;
-}
-
 .timeline-content {
   flex: 1;
   display: flex;
@@ -769,15 +757,6 @@ ul {
   transform: translateY(-3px);
 }
 
-.speaker-avatar {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 16px;
-  border: 3px solid var(--color-primary-light);
-}
-
 .speaker-name {
   font-weight: 600;
   font-size: 1rem;
@@ -787,37 +766,6 @@ ul {
 .speaker-affiliation {
   font-size: 0.8rem;
   color: var(--color-text-muted);
-}
-
-.speaker-tba {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 60px 24px;
-  background: var(--color-bg);
-  border: 2px dashed var(--color-border);
-  border-radius: var(--radius-xl);
-  color: var(--color-text-muted);
-}
-
-.tba-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: var(--color-primary-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 16px;
-}
-
-.tba-icon svg {
-  width: 32px;
-  height: 32px;
-  stroke: var(--color-primary);
-}
-
-.speaker-tba p {
-  font-size: 0.95rem;
 }
 
 /* ---- Schedule ---- */
@@ -911,24 +859,6 @@ ul {
 .organizer-card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
-}
-
-.organizer-card.tba-card {
-  grid-column: 1 / -1;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 48px;
-  border: 2px dashed var(--color-border);
-}
-
-.organizer-avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 2px solid var(--color-primary-light);
 }
 
 .organizer-photo {
@@ -1122,7 +1052,6 @@ ul {
   .nav-toggle {
     display: flex;
   }
-
 
   .overview-grid,
   .cfp-grid {
