@@ -1000,6 +1000,114 @@ ul {
   line-height: 1.45;
 }
 
+/* ---- Featured Sponsor: ROBOTIS ---- */
+.robotis-panel {
+  background:
+    radial-gradient(ellipse 55% 60% at 82% 8%, rgba(26, 86, 219, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 55% at 12% 95%, rgba(13, 148, 136, 0.20) 0%, transparent 60%),
+    var(--color-hero-start);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.robotis-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.robotis-panel > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.robotis-head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 8px;
+}
+
+.robotis-tag {
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.robotis-panel-logo {
+  display: block;
+  height: 40px;
+  width: auto;
+  margin: 16px auto 20px;
+}
+
+.robotis-lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.robotis-lead strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* clips in a centered row at uniform height, orientations kept as-is */
+.robotis-gifs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 940px;
+  margin: 36px auto 0;
+}
+
+.robotis-gif {
+  margin: 0;
+}
+
+.robotis-gif img {
+  display: block;
+  height: 260px;
+  width: auto;
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #0b1220;
+}
+
+.robotis-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.robotis-btn-outline {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.robotis-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.75);
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .robotis-gif img {
+    height: auto;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
 /* ---- Organizers ---- */
 /* 7 organizers -> 4 + 3, the trailing row centred */
 .organizers-grid {
@@ -1199,6 +1307,14 @@ ul {
   color: rgba(255,255,255,0.45);
 }
 
+.footer-funding-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px 48px;
+}
+
 .footer-funding-link {
   display: inline-flex;
   flex-direction: column;
@@ -1211,6 +1327,11 @@ ul {
 .footer-funding-link img {
   height: 54px;
   width: auto;
+}
+
+/* ROBOTIS wordmark is wide and short — size it to match RAS visual weight */
+.footer-funding-link--robotis img {
+  height: 30px;
 }
 
 .footer-funding-link span {
