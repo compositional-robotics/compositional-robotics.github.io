@@ -364,8 +364,25 @@ ul {
 .hero-subtitle {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
+
+.hero-awards {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 30px;
+  padding: 8px 18px;
+  border-radius: 100px;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.hero-awards strong { color: #fbbf24; font-weight: 700; }
+.hero-awards .ha-trophy { font-size: 1.05rem; }
 
 .hero-subtitle a {
   color: rgba(255, 255, 255, 0.8);
@@ -999,6 +1016,36 @@ ul {
   color: var(--color-text-muted);
   line-height: 1.45;
 }
+
+/* Best-paper winners: golden highlight */
+.paper--award {
+  background: linear-gradient(180deg, rgba(245,158,11,0.10), rgba(245,158,11,0.05));
+  border-color: rgba(245,158,11,0.55);
+  border-left: 3px solid var(--color-accent);
+  box-shadow: 0 0 0 1px rgba(245,158,11,0.25), var(--shadow-md);
+}
+
+.paper--award::before {
+  color: var(--color-accent);
+}
+
+.award-badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 7px;
+  padding: 3px 11px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #b45309;
+  background: rgba(245,158,11,0.16);
+  border: 1px solid rgba(245,158,11,0.5);
+  border-radius: 100px;
+}
+
+.award-badge b { font-weight: 800; }
 
 /* ---- Featured Sponsor: ROBOTIS ---- */
 .robotis-panel {
