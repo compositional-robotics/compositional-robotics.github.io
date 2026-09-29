@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root { --teal:#5eead4; --amber:#fbbf24; }
+  html,body { width:1080px; height:1080px; }
+  .card {
+    width:1080px; height:1080px; position:relative; overflow:hidden;
+    font-family:'Inter',system-ui,sans-serif; color:#e5edf7;
+    padding:60px 66px; display:flex; flex-direction:column;
+    background:
+      radial-gradient(ellipse 60% 55% at 84% 6%, rgba(26,86,219,0.34) 0%, transparent 60%),
+      radial-gradient(ellipse 55% 55% at 10% 96%, rgba(13,148,136,0.26) 0%, transparent 60%),
+      linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #1a4d6e 100%);
+  }
+  .card::before { content:''; position:absolute; inset:0; pointer-events:none;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size:54px 54px; }
+  .header, .center, .footer { position:relative; z-index:1; }
+  .header { display:flex; align-items:center; justify-content:space-between; }
+  .ah-left { display:flex; align-items:center; gap:12px; }
+  .ah-left img { height:44px; width:auto; }
+  .ah-name { font-family:'Source Serif 4',serif; font-size:26px; font-weight:600; }
+  .ah-name .c{color:#fff;} .ah-name .t{color:var(--teal);}
+  .ah-iros { height:46px; width:auto; background:#fff; padding:8px 13px; border-radius:9px; box-shadow:0 2px 10px rgba(0,0,0,0.25); }
+  .center { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+  .emblem { width:120px; height:132px; margin-bottom:24px; filter:drop-shadow(0 4px 16px rgba(245,158,11,0.25)); }
+  .eyebrow { font-size:22px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--amber); margin-bottom:30px; }
+  .title { font-family:'Source Serif 4',serif; font-weight:600; color:#fff; line-height:1.16; letter-spacing:-0.01em;
+    font-size:52px; max-width:15em; margin-bottom:28px; }
+  .authors { font-size:26px; line-height:1.5; color:rgba(255,255,255,0.82); max-width:20em; }
+  .footer { display:flex; align-items:center; justify-content:center; gap:14px; }
+  .footer img { height:30px; width:auto; opacity:0.9; }
+  /* size classes to keep long titles fitting */
+  .t-long .title { font-size:46px; }
+  .t-xlong .title { font-size:42px; }
+</style></head>
+<body>
+  <div class="card" id="card">
+    <div class="header">
+      <div class="ah-left"><img src="../img/logo.svg" alt=""><span class="ah-name"><span class="c">Comp</span><span class="t">Robotis</span></span></div>
+      <img class="ah-iros" src="../img/iros-2026-logo.png" alt="IROS 2026">
+    </div>
+    <div class="center">
+      <div class="emblem"><svg viewBox="0 0 64 70" fill="none" aria-hidden="true"><path d="M22 40 L16 66 L32 56 L48 66 L42 40 Z" fill="#fbbf24" opacity="0.9"/><circle cx="32" cy="26" r="21" fill="rgba(245,158,11,0.14)" stroke="#fbbf24" stroke-width="2.5"/><path d="M32.0,14.0 L34.9,22.0 L43.4,22.3 L36.7,27.5 L39.1,35.7 L32.0,30.9 L24.9,35.7 L27.3,27.5 L20.6,22.3 L29.1,22.0 Z" fill="#fbbf24"/></svg></div>
+      <div class="eyebrow">ROBOTIS Best Paper Award</div>
+      <h1 class="title" id="title"></h1>
+      <div class="authors" id="authors"></div>
+    </div>
+    <div class="footer"><img src="../img/robotis-logo.svg" alt="ROBOTIS"></div>
+  </div>
+  <script>
+    var PAPERS = [["Hierarchical Control via Spectral Skills", "Feiyang Wu, Chenxiao Gao, Chen Yang, Ye Zhao, Bo Dai, Anqi Wu"], ["LiLo-VLA: Compositional Long-Horizon Manipulation via Linked Object-Centric Policies", "Yue Yang, Shuo Cheng, Yu Fang, Homanga Bharadhwaj, Mingyu Ding, Gedas Bertasius, Daniel Szafir"], ["Language Steerable Kernels: Equivariant Language Mapping for Data-Efficient Manipulation", "Mingxi Jia, Haojie Huang, Zhewen Zhang, Chenghao Wang, Linfeng Zhao, Dian Wang, Jason Xinyu Liu, Robin Walters, Robert Platt, Stefanie Tellex"]];
+    var i = parseInt((location.hash||'#0').slice(1),10) || 0;
+    var p = PAPERS[i] || PAPERS[0];
+    document.getElementById('title').textContent = p[0];
+    document.getElementById('authors').textContent = p[1];
+    var card = document.getElementById('card');
+    if (p[0].length > 70) card.classList.add('t-xlong');
+    else if (p[0].length > 45) card.classList.add('t-long');
+  </script>
+</body></html>

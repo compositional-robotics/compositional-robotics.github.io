@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CompRobotis · Welcome</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #60a5fa;
+      --teal: #5eead4;
+      --amber: #fbbf24;
+      --ink: #0f172a;
+    }
+    .reveal-viewport {
+      background:
+        radial-gradient(ellipse 55% 60% at 82% 8%, rgba(26,86,219,0.30) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 55% at 12% 95%, rgba(13,148,136,0.22) 0%, transparent 60%),
+        linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #1a4d6e 100%);
+    }
+    .reveal-viewport::before {
+      content: '';
+      position: fixed; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .reveal { font-family: 'Inter', system-ui, sans-serif; color: #e5edf7; }
+    .reveal h1, .reveal h2 { font-family: 'Source Serif 4', Georgia, serif; color: #fff; font-weight: 600; letter-spacing: -0.01em; }
+    .reveal section { text-align: center; }
+
+    /* ---- Title slide ---- */
+    .title-logo { height: 150px; margin: 0 auto 18px; display: block; filter: drop-shadow(0 3px 16px rgba(0,0,0,0.35)); }
+    .badge {
+      display: inline-block; padding: 6px 18px; border-radius: 100px;
+      background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.4);
+      color: var(--amber); font-size: 15px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .brand { font-size: 92px; line-height: 1; margin: 0 0 20px; }
+    .brand .b-comp { color: #fff; }
+    .brand .b-robotis { color: var(--teal); }
+    .full-name {
+      font-family: 'Source Serif 4', Georgia, serif; font-weight: 600;
+      font-size: 30px; line-height: 1.25; color: rgba(255,255,255,0.92);
+      max-width: 20em; margin: 0 auto 26px;
+    }
+    .meta { font-size: 20px; color: rgba(255,255,255,0.72); margin-bottom: 6px; }
+    .meta b { color: #fff; font-weight: 600; }
+    .venue-line { font-size: 16px; color: rgba(255,255,255,0.55); margin-bottom: 38px; }
+    .sponsor { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .sup-label { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .sup-items { display: flex; align-items: center; justify-content: center; gap: 44px; }
+    .sup-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .sup-item img { width: auto; }
+    .sup-ras { height: 46px; }
+    .sup-robotis { height: 27px; }
+    .sup-cap { font-size: 12px; color: rgba(255,255,255,0.58); }
+
+    /* ---- Section kicker ---- */
+    .kicker {
+      font-size: 15px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 8px;
+    }
+    .reveal h2.slide-title { font-size: 46px; margin-bottom: 34px; }
+
+    /* ---- People grids ---- */
+    .people.speakers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 30px; max-width: 1040px; margin: 0 auto; }
+    .people.orgs { display: flex; flex-wrap: wrap; justify-content: center; gap: 26px 30px; max-width: 1140px; margin: 0 auto; }
+    .people.orgs .person { flex: 0 0 220px; }
+    .person { display: flex; flex-direction: column; align-items: center; }
+    .person img {
+      border-radius: 50%; object-fit: cover; background: rgba(255,255,255,0.08);
+      border: 3px solid rgba(255,255,255,0.14); box-shadow: 0 0 0 2px rgba(96,165,250,0.25);
+    }
+    .speakers .person img { width: 150px; height: 150px; }
+    .orgs .person img { width: 116px; height: 116px; }
+    .p-name { font-weight: 700; color: #fff; margin-top: 12px; }
+    .speakers .p-name { font-size: 21px; }
+    .orgs .p-name { font-size: 17px; }
+    .p-aff { color: rgba(255,255,255,0.62); line-height: 1.35; margin-top: 4px; }
+    .speakers .p-aff { font-size: 14px; max-width: 15em; }
+    .orgs .p-aff { font-size: 12.5px; max-width: 14em; }
+
+    .reveal .slides { text-align: center; }
+
+    /* ---- Content / intro slide ---- */
+    .reveal section.content { text-align: left; }
+    .content .wrap { max-width: 1060px; margin: 0 auto; }
+    .content h2.slide-title { text-align: left; margin-bottom: 26px; }
+    .points { list-style: none; margin: 0 0 26px; padding: 0; }
+    .points > li {
+      position: relative; padding-left: 30px; margin-bottom: 18px;
+      font-size: 23px; line-height: 1.5; color: rgba(255,255,255,0.9);
+    }
+    .points > li::before {
+      content: ''; position: absolute; left: 4px; top: 13px;
+      width: 9px; height: 9px; border-radius: 2px; background: var(--teal);
+    }
+    .points em { color: var(--teal); font-style: normal; font-weight: 600; }
+    .q-box {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12);
+      border-left: 3px solid var(--amber); border-radius: 12px; padding: 20px 26px;
+    }
+    .q-box .q-label {
+      font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 12px;
+    }
+    .q-box ul { list-style: none; margin: 0; padding: 0; }
+    .q-box li {
+      position: relative; padding-left: 26px; margin-bottom: 10px;
+      font-size: 20px; line-height: 1.45; color: rgba(255,255,255,0.86);
+    }
+    .q-box li::before { content: '?'; position: absolute; left: 0; top: 0; color: var(--amber); font-weight: 700; }
+    .q-box li:last-child { margin-bottom: 0; }
+
+    /* ---- Submission theme (papers) slides ---- */
+    .ppr-list { list-style: none; margin: 0; padding: 0; }
+    .ppr { margin-bottom: 15px; padding-left: 16px; border-left: 3px solid rgba(94,234,212,0.5); }
+    .ppr-t { display: block; font-size: 19px; font-weight: 600; color: #fff; line-height: 1.35; }
+    .ppr-a { display: block; font-size: 13.5px; color: rgba(255,255,255,0.6); margin-top: 3px; line-height: 1.35; }
+
+    /* ---- ROBOTIS slide ---- */
+    .r-logo { height: 46px; width: auto; display: block; margin: 4px auto 18px; }
+    .r-lead { font-size: 20px; line-height: 1.5; color: rgba(255,255,255,0.82); max-width: 30em; margin: 0 auto 24px; }
+    .r-lead strong { color: #fff; font-weight: 600; }
+    .r-gifs { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px; margin: 0 auto 26px; }
+    .r-gif img { height: 300px; width: auto; border-radius: 12px; border: 1px solid rgba(255,255,255,0.14); background: #0b1220; display: block; }
+    .r-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+    .r-btn { padding: 10px 22px; border-radius: 10px; font-size: 17px; font-weight: 600; border: 2px solid transparent; text-decoration: none; }
+    .r-btn-primary { background: #1a56db; color: #fff; border-color: #1a56db; }
+    .r-btn-outline { color: rgba(255,255,255,0.92); border-color: rgba(255,255,255,0.5); }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1. Welcome -->
+      <section data-auto-animate>
+        <img class="title-logo" src="../img/logo.svg" alt="">
+        <div class="badge">IROS 2026 Workshop</div>
+        <h1 class="brand"><span class="b-comp">Comp</span><span class="b-robotis">Robotis</span></h1>
+        <p class="full-name">Compositional and Modular Learning in the Era of Scaling in Robotics</p>
+        <p class="meta"><b>Sunday, September 27, 2026</b> &nbsp;·&nbsp; 8:30 AM – 12:30 PM</p>
+        <p class="venue-line">Room 408/409 · David L. Lawrence Convention Center · Pittsburgh, PA</p>
+        <div class="sponsor">
+          <span class="sup-label">Supported by</span>
+          <div class="sup-items">
+            <div class="sup-item">
+              <img class="sup-ras" src="../img/ieee-ras-logo.svg" alt="IEEE Robotics &amp; Automation Society">
+              <span class="sup-cap">Technical Committee on Cognitive Robotics</span>
+            </div>
+            <div class="sup-item">
+              <img class="sup-robotis" src="../img/robotis-logo.svg" alt="ROBOTIS">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Framing / Intro -->
+      <section class="content">
+        <div class="wrap">
+          <div class="kicker">Framing</div>
+          <h2 class="slide-title">Perspectives on Composition in Robot Learning</h2>
+          <ul class="points">
+            <li>Data availability dictates how structure is added to solve problems: <em>language &gt; video &gt;&gt;&gt; vision&ndash;action</em>.</li>
+            <li>Robotics is a rich playing ground for modularization and composition: a vast range of problem spaces (state, reward, actions, goals) and applications (long-horizon, grasping).</li>
+          </ul>
+          <div class="q-box">
+            <div class="q-label">Questions for the day</div>
+            <ul>
+              <li>How will scaling data in robotics influence modularity designs?</li>
+              <li>What should the interfaces between compositional or modular agents be?</li>
+              <li>Should compositionality (interpreting parts from the whole) be a goal in itself?</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Focus area: Composing with Scaled Representations -->
+      <section class="content papers-slide">
+        <div class="wrap">
+          <div class="kicker">Submission Themes</div>
+          <h2 class="slide-title">Composing with Scaled Representations</h2>
+          <ul class="ppr-list">
+            <li class="ppr"><span class="ppr-t">Coarse from Human Videos, Precise from Robot Data: Learning a Gated Dual-Actor Policy for Robotic Manipulation</span><span class="ppr-a">Mingxi Jia, Patton Yin, Haojie Huang, Ivy Xiao He, Xuanru Liu, Gefei Liu, Dian Wang, Stefanie Tellex</span></li>
+            <li class="ppr"><span class="ppr-t">Composing Scalable RL Experience with One-Shot Guidance for Multi-Fingered Dexterous Manipulation</span><span class="ppr-a">Hanyu Zhang, Yiyang Ge, Qi Ye, Yanran Ding</span></li>
+            <li class="ppr"><span class="ppr-t">IFG: Internet-Scale Guidance for Functional Grasping Generation</span><span class="ppr-a">Muxin Liu, Mingxuan Li, Kenneth Shaw, Deepak Pathak</span></li>
+            <li class="ppr"><span class="ppr-t">Language Steerable Kernels: Equivariant Language Mapping for Data-Efficient Manipulation</span><span class="ppr-a">Mingxi Jia, Haojie Huang, Zhewen Zhang, Chenghao Wang, Linfeng Zhao, Dian Wang, Jason Xinyu Liu, Robin Walters, Robert Platt, Stefanie Tellex</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Focus area: New Compositional / Modular Approaches -->
+      <section class="content papers-slide">
+        <div class="wrap">
+          <div class="kicker">Submission Themes</div>
+          <h2 class="slide-title">New Compositional / Modular Approaches</h2>
+          <ul class="ppr-list">
+            <li class="ppr"><span class="ppr-t">Jointly Learning Predicates and Actions Enables Zero-Shot Skill Composition</span><span class="ppr-a">Benedict Quartey, Sebastian Castro, Eric Rosen, Wil Thomason, George Konidaris, Stefanie Tellex</span></li>
+            <li class="ppr"><span class="ppr-t">GRAFT: Pre-Grasp Manipulation via Environment-Anchored Graspability Field</span><span class="ppr-a">Anant Sah, Weiwei Gu, Khoa Vo, Nakul Gopalan</span></li>
+            <li class="ppr"><span class="ppr-t">Hierarchical Decomposition of Terrain Adaptation for Quadrupedal Locomotion</span><span class="ppr-a">Ji-Hyeon Yoo, Kartikeya Singh, Karthik K Dantu</span></li>
+            <li class="ppr"><span class="ppr-t">Retriever: Composing Closed-Loop Asynchronous Robot Programs</span><span class="ppr-a">Linfeng Zhao, Haojie Huang, Jiayuan Mao, Weiyu Liu, Mykel Kochenderfer, Lawson L.S. Wong</span></li>
+            <li class="ppr"><span class="ppr-t">Code Agents Automate the Two Manual Bottlenecks of Sim-Based Robot Learning: Digital Twin Scene Construction and Demonstration Collection</span><span class="ppr-a">Brian Y. Tsui</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Focus area: New Modular Approaches (Object-Centric) -->
+      <section class="content papers-slide">
+        <div class="wrap">
+          <div class="kicker">Submission Themes</div>
+          <h2 class="slide-title">New Modular Approaches (Object-Centric)</h2>
+          <ul class="ppr-list">
+            <li class="ppr"><span class="ppr-t">LiLo-VLA: Compositional Long-Horizon Manipulation via Linked Object-Centric Policies</span><span class="ppr-a">Yue Yang, Shuo Cheng, Yu Fang, Homanga Bharadhwaj, Mingyu Ding, Gedas Bertasius, Daniel Szafir</span></li>
+            <li class="ppr"><span class="ppr-t">Object-Centric Spatial–Temporal Compositionality for Visual Learning from Demonstration</span><span class="ppr-a">Ahmet Ercan Tekden, Yasemin Bekiroglu</span></li>
+            <li class="ppr"><span class="ppr-t">Learning Relational Manipulation from Few Demonstrations via Compositional Object-Centric Interactions</span><span class="ppr-a">Ze Fu, Pinhao Song, Yutong Hu, Renaud Detry</span></li>
+            <li class="ppr"><span class="ppr-t">From Demonstrations to Composable Skills: Object-Centric Reward Decomposition for Long-Horizon Manipulation</span><span class="ppr-a">Andrea Protopapa, Davide Buoso, Francesca Pistilli, Georgia Chalvatzaki, Giuseppe Averta</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Focus area: Novel Interfaces for Modularization / Composition -->
+      <section class="content papers-slide">
+        <div class="wrap">
+          <div class="kicker">Submission Themes</div>
+          <h2 class="slide-title">Novel Interfaces for Modularization / Composition</h2>
+          <ul class="ppr-list">
+            <li class="ppr"><span class="ppr-t">Hierarchical Control via Spectral Skills</span><span class="ppr-a">Feiyang Wu, Chenxiao Gao, Chen Yang, Ye Zhao, Bo Dai, Anqi Wu</span></li>
+            <li class="ppr"><span class="ppr-t">Unveiler: Modular Spatial Reasoning for Sequential Manipulation in Dense Clutter</span><span class="ppr-a">Chrisantus Eze, Ryan Julian, Christopher Crick</span></li>
+            <li class="ppr"><span class="ppr-t">Asynchronous Multimodal Diffusion Policy Composition via Latency-Aware Guidance Fusion</span><span class="ppr-a">Zihao He, Hongjie Fang, Shirun Tang, Cewu Lu, Hao-Shu Fang</span></li>
+            <li class="ppr"><span class="ppr-t">Where Should Stage Information Go? Language and State Interfaces for VLA Fine-Tuning</span><span class="ppr-a">Yingwei Ji</span></li>
+            <li class="ppr"><span class="ppr-t">RoboStoryboard: Sparse Visual Planning for Robot Manipulation Tasks</span><span class="ppr-a">Chongkai Gao, Wenlong Huang, Haonan Chen, Lin Shao, Ruohan Zhang, Li Fei-Fei</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 3. Invited Speakers -->
+      <section>
+        <div class="kicker">Invited Talks</div>
+        <h2 class="slide-title">Invited Speakers</h2>
+        <div class="people speakers">
+          <div class="person"><img src="../img/speakers/yilun-du.jpg" alt=""><div class="p-name">Yilun Du</div><div class="p-aff">Assistant Professor, Harvard University</div></div>
+          <div class="person"><img src="../img/speakers/jiayuan-mao.jpg" alt=""><div class="p-name">Jiayuan Mao</div><div class="p-aff">Amazon Frontier AI &amp; Robotics; incoming Assistant Professor, UPenn</div></div>
+          <div class="person"><img src="../img/speakers/eric-rosen.jpg" alt=""><div class="p-name">Eric Rosen</div><div class="p-aff">Research Scientist, Robotics and AI Institute (RAI)</div></div>
+          <div class="person"><img src="../img/speakers/nakul-gopalan.jpg" alt=""><div class="p-name">Nakul Gopalan</div><div class="p-aff">Assistant Professor, Arizona State University</div></div>
+          <div class="person"><img src="../img/speakers/leslie-kaelbling.jpg" alt=""><div class="p-name">Leslie Kaelbling</div><div class="p-aff">Panasonic Professor of CS &amp; Engineering, MIT</div></div>
+          <div class="person"><img src="../img/speakers/eric-eaton.jpg" alt=""><div class="p-name">Eric Eaton</div><div class="p-aff">Research Associate Professor, University of Pennsylvania</div></div>
+        </div>
+      </section>
+
+      <!-- 3. Organizers -->
+      <section>
+        <div class="kicker">Team</div>
+        <h2 class="slide-title">Organizers</h2>
+        <div class="people orgs">
+          <div class="person"><img src="../img/organizers/omkar-patil.jpg" alt=""><div class="p-name">Omkar Patil</div><div class="p-aff">PhD, Arizona State University</div></div>
+          <div class="person"><img src="../img/organizers/haonan-chen.jpg" alt=""><div class="p-name">Haonan Chen</div><div class="p-aff">Postdoc, Harvard &amp; Stanford (visiting)</div></div>
+          <div class="person"><img src="../img/organizers/utkarsh-mishra.jpg" alt=""><div class="p-name">Utkarsh Mishra</div><div class="p-aff">PhD, Georgia Tech</div></div>
+          <div class="person"><img src="../img/organizers/julen-urain.jpg" alt=""><div class="p-name">Julen Urain</div><div class="p-aff">Applied Scientist, Amazon FAR</div></div>
+          <div class="person"><img src="../img/organizers/danfei-xu.jpg" alt=""><div class="p-name">Danfei Xu</div><div class="p-aff">Assistant Professor, Georgia Tech</div></div>
+          <div class="person"><img src="../img/organizers/yilun-du.jpg" alt=""><div class="p-name">Yilun Du</div><div class="p-aff">Assistant Professor, Harvard University</div></div>
+          <div class="person"><img src="../img/organizers/nakul-gopalan.jpg" alt=""><div class="p-name">Nakul Gopalan</div><div class="p-aff">Assistant Professor, Arizona State University</div></div>
+        </div>
+      </section>
+
+      <!-- 4. ROBOTIS -->
+      <section>
+        <div class="kicker">Supported by</div>
+        <img class="r-logo" src="../img/robotis-logo.svg" alt="ROBOTIS">
+        <p class="r-lead">ROBOTIS is bringing its <strong>AI Sapiens</strong> platform to IROS&nbsp;2026. See its <strong>AI Worker</strong> robots in action below, and visit the team at <strong>Booth&nbsp;422</strong>.</p>
+        <div class="r-gifs">
+          <div class="r-gif"><img src="../img/robotis/ai-worker.gif" alt="ROBOTIS AI Worker performing a manipulation task"></div>
+          <div class="r-gif"><img src="../img/robotis/pick-cylinder.gif" alt="ROBOTIS AI Worker picking up a blue cylinder"></div>
+          <div class="r-gif"><img src="../img/robotis/pack-bread.gif" alt="ROBOTIS AI Worker placing bread into a container"></div>
+        </div>
+        <div class="r-cta">
+          <a class="r-btn r-btn-outline" href="https://2026.ieee-iros.org/program/exhibit-hall/#422" target="_blank" rel="noopener">ROBOTIS &middot; Booth 422</a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({ width: 1280, height: 720, margin: 0.04, controls: true, progress: true, hash: true, transition: 'slide' });
+  </script>
+</body>
+</html>
